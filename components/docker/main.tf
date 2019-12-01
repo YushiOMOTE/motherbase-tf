@@ -20,7 +20,7 @@ resource "docker_container" "sync" {
     type   = "volume"
   }
   env = [
-    "SYNC_SRC=https://github.com/YushiOMOTE/motherbase.git",
+    "SYNC_SRC=https://github.com/YushiOMOTE/motherbase-web.git",
     "SYNC_DST=/git",
     "SYNC_WAIT=10",
   ]
