@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -ex
 
 if [ -z $1 -o -z $2 ]; then
     echo "./raw.sh <component> <args>..."
