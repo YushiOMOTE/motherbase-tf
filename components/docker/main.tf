@@ -24,6 +24,7 @@ resource "docker_container" "sync" {
     "SYNC_DST=/git",
     "SYNC_WAIT=10",
   ]
+  restart = "always"
 }
 
 resource "docker_image" "sync" {
@@ -65,6 +66,7 @@ resource "docker_container" "nginx" {
     source = "/home/rancher/nginx/conf.d"
     type = "bind"
   }
+  restart = "always"
 }
 
 resource "docker_image" "nginx" {
