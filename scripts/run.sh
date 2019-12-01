@@ -3,7 +3,7 @@
 set -ex
 
 function usage {
-    echo "./run.sh <component> <workspace> [plan|apply|plan-apply|destroy]"
+    echo "./run.sh <component> <workspace> [plan|apply|plan-apply|destroy|taint|cmd]"
 
     exit 1
 }
@@ -55,6 +55,9 @@ else
         taint)
             state=terraform.tfstate.d/${workspace}/terraform.tfstate
             terraform taint -state=$state "$@"
+            ;;
+        cmd)
+            terraform "$@"
             ;;
         *)
             usage
