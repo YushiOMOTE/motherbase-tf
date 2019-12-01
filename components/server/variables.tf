@@ -13,7 +13,7 @@ variable domain {
 }
 
 variable cloud_config {
-  default = "https://raw.githubusercontent.com/YushiOMOTE/motherbase/master/terraform/components/server/templates/cloud-config.yml"
+  default = "https://raw.githubusercontent.com/YushiOMOTE/motherbase-tf/master/components/server/templates/cloud-config.yml"
 }
 
 variable reserve_ip {
